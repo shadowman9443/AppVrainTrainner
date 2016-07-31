@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.shadow.braintrainerapp.MainActivity">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="GO"
+        android:id="@+id/startbutton"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="80sp"
+        android:padding="40dp"
+        android:background="#14f727"
+        android:onClick="start"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible"
+        android:id="@+id/gameRelativeLayout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30S"
+            android:id="@+id/timertextView"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:textSize="30sp"
+            android:background="#f7f705"
+            android:padding="10dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/0"
+            android:id="@+id/pointstextView"
+            android:layout_alignTop="@+id/timertextView"
+            android:layout_alignParentEnd="true"
+            android:padding="10dp"
+            android:background="#f97e13"
+            android:textSize="30sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="31+15"
+            android:id="@+id/sumtextView"
+            android:layout_alignTop="@+id/pointstextView"
+            android:layout_centerHorizontal="true"
+            android:textSize="30sp"
+            android:padding="15dp"
+            android:textColor="#415069" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sumtextView"
+            android:layout_alignParentStart="true"
+
+            android:layout_marginTop="20dp"
+            android:id="@+id/gridLayout">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="0"
+                android:id="@+id/buttonOne"
+                android:textSize="80sp"
+                android:background="#1440df"
+                android:allowUndo="false"
+                android:onClick="chooseAnswer" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="2"
+                android:layout_row="0"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="1"
+                android:id="@+id/buttonTwo"
+                android:textSize="80sp"
+                android:background="#c813a1"
+                android:allowUndo="false"
+                android:onClick="chooseAnswer" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="0"
+                android:layout_row="2"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="2"
+                android:id="@+id/buttonThree"
+                android:textSize="80sp"
+                android:background="#e42618"
+                android:allowUndo="false"
+                android:onClick="chooseAnswer" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:layout_column="2"
+                android:layout_row="2"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_gravity="fill"
+                android:tag="3"
+                android:id="@+id/buttonFour"
+                android:textSize="80sp"
+                android:background="#11e82a"
+                android:allowUndo="false"
+                android:onClick="chooseAnswer" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/correcttextView"
+            android:textSize="40sp"
+            android:text="Correct"
+            android:layout_below="@+id/gridLayout"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Score is"
+        android:id="@+id/scoreTextView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="40sp"
+        android:background="#14f727"
+        android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PlayAgain"
+        android:id="@+id/buttonPLayAgain"
+        android:onClick="playAgain"
+        android:visibility="invisible"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="#2d032e"
+        android:textColor="#c9f505" />
+
+</RelativeLayout>
